@@ -325,272 +325,337 @@
       footer{padding-bottom:90px}
       .mobile-call{display:block}
     }
-  </style>
+
+    /* 專業延伸區 */
+    .extension-section{
+      padding:88px 0;
+      background:linear-gradient(180deg,#f8fffc 0%,#effaf5 100%);
+      border-top:1px solid var(--line);
+    }
+    .extension-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-top:36px;
+    }
+    .extension-card{
+      display:block;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:0 10px 28px rgba(27,67,50,.06);
+      transition:.22s ease;
+    }
+    .extension-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+    .extension-card .tag{
+      display:inline-block;
+      padding:5px 10px;
+      border-radius:999px;
+      background:var(--green-soft);
+      color:var(--green-dark);
+      font-size:.82rem;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+    .extension-card h3{
+      margin:0 0 10px;
+      font-size:1.35rem;
+      color:var(--green-deep);
+    }
+    .extension-card p{
+      margin:0;
+      color:var(--muted);
+    }
+    .extension-card .more{
+      display:inline-block;
+      margin-top:16px;
+      color:var(--green-dark);
+      font-weight:900;
+    }
+
+    .company-intro{
+      margin-top:34px;
+      padding:30px;
+      border-radius:22px;
+      background:white;
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(27,67,50,.05);
+    }
+    .company-intro h3{
+      margin:0 0 10px;
+      font-size:1.5rem;
+      color:var(--green-deep);
+    }
+    .company-intro p{margin:0;color:var(--muted)}
+
+    .latest-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-top:36px;
+    }
+    .latest-card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px;
+    }
+    .latest-card time{
+      display:block;
+      color:var(--green-dark);
+      font-weight:900;
+      font-size:.9rem;
+      margin-bottom:8px;
+    }
+    .latest-card h3{
+      margin:0 0 8px;
+      font-size:1.25rem;
+    }
+    .latest-card p{
+      margin:0;
+      color:var(--muted);
+    }
+    .latest-card a{
+      display:inline-block;
+      margin-top:15px;
+      color:var(--green-dark);
+      font-weight:900;
+    }
+
+    .service-line{
+      display:block;
+      font-size:.86rem;
+      font-weight:800;
+      opacity:.82;
+      margin-bottom:2px;
+    }
+
+    @media(max-width:900px){
+      .extension-grid,.latest-grid{grid-template-columns:1fr}
+    }
+
+  
+    /* V4 official homepage */
+    .v4-hero{
+      position:relative;min-height:720px;display:flex;align-items:center;
+      background:
+        linear-gradient(90deg,rgba(0,52,40,.82),rgba(0,76,55,.54) 48%,rgba(0,40,30,.18)),
+        url('images/cooling-tower.jpg') center/cover no-repeat;
+      color:white;overflow:hidden;
+    }
+    .v4-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,rgba(0,50,38,.35))}
+    .v4-hero .container{position:relative;z-index:2}
+    .v4-hero-copy{max-width:780px}
+    .v4-hero .eyebrow{background:rgba(255,255,255,.12);color:#eafff3;border:1px solid rgba(255,255,255,.2)}
+    .v4-hero h1{font-size:clamp(3rem,6vw,5.7rem);line-height:1.03;margin:20px 0 18px;letter-spacing:-.055em}
+    .v4-hero h1 span{display:block;color:#9bf1c5}
+    .v4-hero p{font-size:1.18rem;max-width:720px;color:rgba(255,255,255,.86)}
+    .v4-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .v4-actions .btn-primary{background:white;color:var(--green-deep);box-shadow:none}
+    .v4-actions .btn-secondary{background:rgba(255,255,255,.08);color:white;border-color:rgba(255,255,255,.35)}
+    .v4-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;color:rgba(255,255,255,.82);font-weight:800}
+    .v4-trust span:before{content:"✓";margin-right:7px;color:#9bf1c5}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .about-photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+    .about-photo img{width:100%;height:480px;object-fit:cover}
+    .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+    .feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;font-weight:800}
+    .service-photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+    .service-photo{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.22s;box-shadow:0 10px 25px rgba(27,67,50,.05)}
+    .service-photo:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .service-photo img{width:100%;height:210px;object-fit:cover}
+    .service-photo .body{padding:20px}.service-photo h3{margin:0 0 8px}.service-photo p{margin:0;color:var(--muted)}
+    .portfolio-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:18px;margin-top:36px}
+    .portfolio{position:relative;border-radius:22px;overflow:hidden;min-height:340px;box-shadow:var(--shadow)}
+    .portfolio:first-child{grid-row:span 2;min-height:700px}
+    .portfolio img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+    .portfolio .caption{position:absolute;left:0;right:0;bottom:0;padding:26px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.78))}
+    .portfolio h3{margin:32px 0 4px}.portfolio p{margin:0;color:rgba(255,255,255,.82)}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+    .why{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}.why strong{display:block;color:var(--green-dark);font-size:1.05rem;margin-bottom:6px}
+    .section.soft{background:#eff9f4}
+    .home-articles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+    .home-article{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}.home-article h3{margin:10px 0}.home-article p{color:var(--muted)}
+    .home-article a{color:var(--green-dark);font-weight:900}
+    .contact-strip{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:linear-gradient(135deg,#005f46,#18b77d);border-radius:28px;padding:40px;color:white}
+    .contact-strip h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 8px}.contact-strip p{margin:0;color:rgba(255,255,255,.82)}
+    .contact-strip .btn{background:white;color:var(--green-deep)}
+    @media(max-width:980px){
+      .about-grid,.contact-strip{grid-template-columns:1fr}
+      .service-photo-grid{grid-template-columns:1fr 1fr}
+      .portfolio-grid{grid-template-columns:1fr 1fr}
+      .portfolio:first-child{grid-row:auto;grid-column:1/-1;min-height:480px}
+      .why-grid,.home-articles{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .v4-hero{min-height:640px}
+      .v4-hero h1{font-size:2.7rem}
+      .service-photo-grid,.portfolio-grid,.why-grid,.home-articles,.feature-list{grid-template-columns:1fr}
+      .portfolio:first-child{min-height:390px}
+      .portfolio{min-height:300px}
+      .about-photo img{height:330px}
+      .v4-actions{display:grid}
+    }
+
+</style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="中央噪音工程首頁">
-        <span class="brand-mark"></span>
-        <span><strong>中央噪音工程</strong><small>中央污染防治設備有限公司</small></span>
-      </a>
-      <nav class="nav-links">
-        <a href="#services">服務項目</a>
-        <a href="#process">服務流程</a>
-        <a href="#cases">工程案例</a>
-        <a href="#faq">常見問題</a>
-        <a class="nav-cta" href="#contact">免費評估</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="中央噪音工程首頁">
+      <span class="brand-mark"></span>
+      <span><strong>中央噪音工程</strong><small>中央污染防治設備有限公司</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">服務項目</a>
+      <a href="#portfolio">工程實績</a>
+      <a href="articles.html">專業文章</a>
+      <a href="#faq">常見問題</a>
+      <a class="nav-cta" href="tel:0983057746">服務專線</a>
+    </nav>
+  </div>
+</header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">工業噪音整合改善</span>
-          <h1>讓設備正常運轉，<span>讓噪音降到可接受。</span></h1>
-          <p class="hero-copy">
-            專業處理工廠、冷卻水塔、空壓機、風機、發電機、排氣管路與低頻振動噪音。
-            從現場量測、噪音源判斷，到隔音、吸音、消音與減震工程，提供可施工、可維修、兼顧設備散熱的整合方案。
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">預約免費初步評估</a>
-            <a class="btn btn-secondary" href="tel:0983057746">立即來電諮詢</a>
-          </div>
-          <div class="trust">
-            <span>不誇大承諾完全無聲</span>
-            <span>以法規與環境可接受為目標</span>
-            <span>全台服務</span>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <img src="images/machine-room.jpg" alt="工業設備噪音現場勘查" style="width:100%;height:460px;object-fit:cover;border-radius:24px;">
-          <div class="sound-panel" style="display:none;">
-            <div>
-              <span class="eyebrow" style="background:rgba(255,255,255,.12);color:white">噪音改善成果</span>
-              <div class="sound-bars" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
-            </div>
-            <div>
-              <div class="big-number">10–30 <small>dB</small></div>
-              <p>依現場條件、噪音頻率、距離、開口與結構傳振狀況而異。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container stats">
-      <div class="stats-grid">
-        <div class="stat"><strong>20+ 年</strong><span>噪音工程經驗</span></div>
-        <div class="stat"><strong>500+</strong><span>工程與改善案例</span></div>
-        <div class="stat"><strong>10–30 dB</strong><span>常見改善幅度</span></div>
-        <div class="stat"><strong>全台</strong><span>現勘、規劃與施工</span></div>
-      </div>
-    </div>
-
-    <section class="section" id="services">
-      <div class="container">
-        <span class="eyebrow">專業服務</span>
-        <h2 class="section-title">不是只把設備包起來，<br>而是找出噪音真正從哪裡來。</h2>
-        <p class="section-lead">
-          設備噪音可能來自馬達、風切、排氣脈動、結構傳振、牆面共振或出口未消音。
-          我們依現場條件，選擇合適的隔音、吸音、消音與減震組合。
-        </p>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="icon">01</div>
-            <h3>工廠噪音改善</h3>
-            <p>針對產線、沖床、破碎機、鼓風機、鍋爐及大型設備，規劃整體聲學改善。</p>
-            <a href="#contact">了解改善方式 →</a>
-          </article>
-          <article class="service-card">
-            <div class="icon">02</div>
-            <h3>冷卻水塔噪音</h3>
-            <p>處理風扇聲、落水聲、馬達振動與鄰界直射問題，設計隔音牆與進排風消音。</p>
-            <a href="#contact">了解改善方式 →</a>
-          </article>
-          <article class="service-card">
-            <div class="icon">03</div>
-            <h3>空壓機隔音</h3>
-            <p>規劃隔音罩、通風消音、基座減震及維修開口，避免因密閉造成過熱。</p>
-            <a href="#contact">了解改善方式 →</a>
-          </article>
-          <article class="service-card">
-            <div class="icon">04</div>
-            <h3>風機與排風機</h3>
-            <p>處理進排風噪音、管道共鳴、風切聲與鐵皮共振，依風量需求控制壓損。</p>
-            <a href="#contact">了解改善方式 →</a>
-          </article>
-          <article class="service-card">
-            <div class="icon">05</div>
-            <h3>發電機與機房</h3>
-            <p>提供排氣消音器、機房隔音、吸音牆與減震設計，兼顧散熱與維修動線。</p>
-            <a href="#contact">了解改善方式 →</a>
-          </article>
-          <article class="service-card">
-            <div class="icon">06</div>
-            <h3>低頻與結構振動</h3>
-            <p>針對管路、樓板、鐵皮、設備基座與建築結構傳振，找出共振路徑再改善。</p>
-            <a href="#contact">了解改善方式 →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process" id="process">
-      <div class="container">
-        <span class="eyebrow" style="background:rgba(255,255,255,.1);color:#d9eee2">工程流程</span>
-        <h2 class="section-title">先判斷，再設計，最後施工。</h2>
-        <p class="section-lead">避免只靠經驗猜測，也避免做了隔音後產生散熱、壓損或維修困難。</p>
-        <div class="process-grid">
-          <div class="step">
-            <div class="step-num">STEP 01</div>
-            <h3>初步了解</h3>
-            <p>提供設備照片、影片、位置、運轉時間與鄰近環境，我們先判斷可能問題。</p>
-          </div>
-          <div class="step">
-            <div class="step-num">STEP 02</div>
-            <h3>現場勘查</h3>
-            <p>確認噪音源、頻率、傳遞路徑、風量、散熱、維修空間與施工限制。</p>
-          </div>
-          <div class="step">
-            <div class="step-num">STEP 03</div>
-            <h3>改善規劃</h3>
-            <p>提出隔音牆、隔音罩、消音器、吸音內襯、減震與結構補強方案。</p>
-          </div>
-          <div class="step">
-            <div class="step-num">STEP 04</div>
-            <h3>施工驗收</h3>
-            <p>依現場需求執行，並確認設備運轉、維修、散熱與噪音改善狀況。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="cases">
-      <div class="container">
-        <span class="eyebrow">案例方向</span>
-        <h2 class="section-title">從噪音源到傳遞路徑，<br>每一案都不是同一套做法。</h2>
-        <p class="section-lead">以下為常見工程類型。實際改善幅度仍須依現場環境、背景音與施工條件評估。</p>
-
-        <div class="case-grid">
-          <article class="case">
-            <div class="case-visual" style="background:url('images/cooling-tower.jpg') center/cover;"><span class="case-badge">冷卻水塔隔音工程</span></div>
-            <div class="case-body">
-              <h3>高樓屋頂冷卻水塔隔音牆</h3>
-              <p>針對風扇噪音、落水聲與周邊住宅直射問題，規劃具高度與繞射控制的隔音牆。</p>
-              <div class="case-result"><span>主要方法</span><strong>隔音牆＋吸音內襯</strong></div>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case-visual" style="background:url('images/industrial-wall.jpg') center/cover;"><span class="case-badge">排氣管路消音工程</span></div>
-            <div class="case-body">
-              <h3>風機排氣高頻與共鳴改善</h3>
-              <p>依風量與管徑配置消音器，並調整出口方向與管路包覆，降低高頻外洩與共鳴。</p>
-              <div class="case-result"><span>主要方法</span><strong>消音器＋管路優化</strong></div>
-            </div>
-          </article>
-        </div>
-
-        <div class="seo-band">
-          <div>
-            <h3>桃園、台北及全台工業噪音改善</h3>
-            <p>服務工廠、科技廠、餐飲、旅館、辦公室與社區設備噪音，提供現場勘查、設計與施工。</p>
-          </div>
-          <a class="btn btn-primary" href="#contact">詢問你的現場</a>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="gallery">
-      <div class="container">
-        <span class="eyebrow">實際工程現場</span>
-        <h2 class="section-title">真實施工照片，比示意圖更有說服力。</h2>
-        <p class="section-lead">設備現勘、風管消音、鋼構隔音牆與冷卻水塔周邊工程，皆依現場空間與設備條件規劃。</p>
-        <div class="gallery-grid">
-          <img src="images/fan-duct.jpg" alt="大型風管與風機噪音改善現場">
-          <img src="images/steel-frame.jpg" alt="工業隔音牆鋼構施工">
-          <img src="images/industrial-wall.jpg" alt="工業設備隔音工程">
-          <img src="images/cooling-tower.jpg" alt="冷卻水塔噪音改善">
-          <img src="images/cooling-tower-up.jpg" alt="冷卻水塔上方隔音結構">
-          <img src="images/construction.jpg" alt="噪音改善工程基礎施工">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <span class="eyebrow">常見問題</span>
-        <h2 class="section-title">噪音工程常見問題</h2>
-        <div class="faq">
-          <details open>
-            <summary>噪音改善可以保證完全無聲嗎？</summary>
-            <p>通常不建議承諾完全無聲。實際目標應依設備需求、法規、背景音、距離及環境容忍度，將噪音降到合理且可接受的程度。</p>
-          </details>
-          <details>
-            <summary>只做隔音罩就一定有效嗎？</summary>
-            <p>不一定。若噪音透過基座、管路或建築結構傳遞，只包設備可能改善有限，還可能造成散熱不良，因此需先確認噪音路徑。</p>
-          </details>
-          <details>
-            <summary>消音器會影響風量或設備運轉嗎？</summary>
-            <p>消音器會產生一定壓損，設計時需依風量、風速、管徑與設備能力計算，避免過度阻力影響運轉。</p>
-          </details>
-          <details>
-            <summary>可以先用照片與影片初步判斷嗎？</summary>
-            <p>可以。建議提供設備全景、近照、運轉影片、周邊環境、與陳情位置的方向，先做初步判斷，再決定是否安排現勘。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>有噪音問題，先把現場照片傳給我們。</h2>
-            <p>請提供設備名稱、地點、運轉時間、噪音發生位置與照片影片，我們先協助判斷方向。</p>
-          </div>
-          <a class="btn" href="tel:0983057746">立即諮詢</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+<main id="top">
+  <section class="v4-hero">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>中央污染防治設備有限公司</h4>
-          <p>專業工業噪音改善、隔音、吸音、消音與減震工程。以可施工、可維修、兼顧設備運轉為規劃原則。</p>
+      <div class="v4-hero-copy">
+        <span class="eyebrow">20+ 年工業噪音工程經驗</span>
+        <h1>中央噪音工程<span>隔音・消音・吸音・減震</span></h1>
+        <p>專業處理工廠、冰水主機、冷卻水塔、空壓機、風機、發電機、排氣管路與低頻振動噪音。從現場勘查、原因判斷到設計施工，提供可落地的整合改善方案。</p>
+        <div class="v4-actions">
+          <a class="btn btn-primary" href="tel:0983057746">服務專線 0983-057-746</a>
+          <a class="btn btn-secondary" href="https://line.me/ti/p/~0983057746">LINE 諮詢</a>
+          <a class="btn btn-secondary" href="#portfolio">查看工程實績</a>
         </div>
-        <div>
-          <h4>服務項目</h4>
-          <div class="footer-links">
-            <a href="#services">工廠噪音改善</a>
-            <a href="#services">冷卻水塔噪音</a>
-            <a href="#services">風機與空壓機</a>
-            <a href="#services">發電機與低頻振動</a>
-          </div>
-        </div>
-        <div>
-          <h4>聯絡資訊</h4>
-          <div class="footer-links">
-            <a href="tel:0983057746">電話：0983-057-746</a>
-            <a href="https://line.me/ti/p/~0983057746">LINE：0983057746</a><a href="mailto:apce.corp@gmail.com">Email：apce.corp@gmail.com</a>
-            <span style="color:rgba(255,255,255,.68)">服務區域：桃園、台北及全台</span>
-          </div>
+        <div class="v4-trust"><span>20+ 年經驗</span><span>500+ 工程案例</span><span>全台服務</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container stats">
+    <div class="stats-grid">
+      <div class="stat"><strong>20+ 年</strong><span>噪音工程經驗</span></div>
+      <div class="stat"><strong>500+</strong><span>工程與改善案例</span></div>
+      <div class="stat"><strong>10–30 dB</strong><span>常見改善幅度</span></div>
+      <div class="stat"><strong>全台</strong><span>現勘、規劃與施工</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div>
+        <span class="eyebrow">關於我們</span>
+        <h2 class="section-title">噪音問題，不只看設備本體。</h2>
+        <p class="section-lead">中央污染防治設備有限公司長期投入工業噪音改善，從設備、風量、管路、基座、吊架到建築結構一起評估。每一案依現場條件規劃，不以單一材料或固定做法套用所有案件。</p>
+        <div class="feature-list">
+          <div class="feature">現場勘查與原因判斷</div>
+          <div class="feature">客製化隔音／消音設計</div>
+          <div class="feature">兼顧設備散熱與維修</div>
+          <div class="feature">低頻與結構傳振分析</div>
         </div>
       </div>
-      <div class="copyright">© 2026 中央污染防治設備有限公司．保留所有權利</div>
+      <div class="about-photo"><img src="images/site-measurement.jpg" alt="中央噪音工程現場丈量與設備勘查"></div>
     </div>
-  </footer>
+  </section>
 
-  <a class="mobile-call" href="tel:0983057746">立即來電諮詢</a>
-</body>
-</html>
+  <section class="section soft" id="services">
+    <div class="container">
+      <span class="eyebrow">服務項目</span>
+      <h2 class="section-title">常見工業設備噪音改善</h2>
+      <p class="section-lead">依設備特性選擇隔音、吸音、消音與減震的適當組合，避免只處理表面聲音而忽略真正傳遞路徑。</p>
+      <div class="service-photo-grid">
+        <a class="service-photo" href="chiller-noise.html"><img src="images/chiller-teco.jpg" alt="冰水主機噪音改善"><div class="body"><h3>冰水主機</h3><p>低頻嗡嗡聲、管路共振、結構傳振。</p></div></a>
+        <a class="service-photo" href="cooling-tower-noise.html"><img src="images/cooling-tower-side.jpg" alt="冷卻水塔噪音改善"><div class="body"><h3>冷卻水塔</h3><p>風扇、落水、馬達振動與聲音直射。</p></div></a>
+        <a class="service-photo" href="air-compressor-noise.html"><img src="images/vibration-spring-close.jpg" alt="空壓機減震與隔音"><div class="body"><h3>空壓機</h3><p>隔音罩、散熱、進排風消音與基座減震。</p></div></a>
+        <div class="service-photo"><img src="images/fan-duct.jpg" alt="風機與排風管路消音"><div class="body"><h3>風機／排風機</h3><p>風切、管路共鳴、進排風噪音與消音器。</p></div></div>
+        <div class="service-photo"><img src="images/industrial-wall.jpg" alt="工廠隔音牆工程"><div class="body"><h3>隔音牆工程</h3><p>設備直射噪音、鄰界隔音與吸音內襯。</p></div></div>
+        <div class="service-photo"><img src="images/pipe-support-row.jpg" alt="管路共振與支撐改善"><div class="body"><h3>管路共振</h3><p>吊架、管夾、柔性接頭與結構傳振。</p></div></div>
+        <div class="service-photo"><img src="images/steel-frame.jpg" alt="工業隔音鋼構施工"><div class="body"><h3>工廠噪音</h3><p>產線、機械設備、隔音罩與局部防治。</p></div></div>
+        <div class="service-photo"><img src="images/construction.jpg" alt="噪音改善工程施工"><div class="body"><h3>現場勘查</h3><p>先確認問題，再決定最合適的施工方式。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <div class="container">
+      <span class="eyebrow">精選工程實績</span>
+      <h2 class="section-title">用真實工程照片呈現施工經驗</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio"><img src="images/cooling-tower.jpg" alt="冷卻水塔隔音改善工程"><div class="caption"><h3>冷卻水塔噪音改善</h3><p>依現場聲音直射、風量及空間條件規劃隔音措施。</p></div></div>
+        <div class="portfolio"><img src="images/chiller-mount.jpg" alt="冰水主機避震器"><div class="caption"><h3>冰水主機減震</h3><p>檢查主機避震器與結構傳振。</p></div></div>
+        <div class="portfolio"><img src="images/pipe-hanger.jpg" alt="管路吊架防振"><div class="caption"><h3>管路吊架</h3><p>降低管路與建築物剛性接觸。</p></div></div>
+        <div class="portfolio"><img src="images/cooling-pipe-blue.jpg" alt="大型冷卻水管路"><div class="caption"><h3>大型管路支撐</h3><p>支撐、固定點與柔性連接整體評估。</p></div></div>
+        <div class="portfolio"><img src="images/site-measurement.jpg" alt="工程現場丈量"><div class="caption"><h3>現場丈量</h3><p>施工前確認設備尺寸與維修空間。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="why">
+    <div class="container">
+      <span class="eyebrow">為什麼選擇我們</span>
+      <h2 class="section-title">工程經驗不是只有做過，而是知道怎麼判斷。</h2>
+      <div class="why-grid">
+        <div class="why"><strong>20+ 年工程經驗</strong><span>熟悉工業設備、建築結構與現場施工限制。</span></div>
+        <div class="why"><strong>500+ 工程案例</strong><span>累積不同設備、環境與噪音類型的改善經驗。</span></div>
+        <div class="why"><strong>全台服務</strong><span>工廠、商辦、社區與各類設備噪音案件。</span></div>
+        <div class="why"><strong>客製化設計</strong><span>不套用單一方案，依實際設備與空間規劃。</span></div>
+        <div class="why"><strong>兼顧設備運轉</strong><span>注意散熱、風量、壓損、維修與安全。</span></div>
+        <div class="why"><strong>低頻／結構傳振</strong><span>從管路、吊架、基座與樓板找出可能路徑。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="articles">
+    <div class="container">
+      <span class="eyebrow">專業文章</span>
+      <h2 class="section-title">噪音工程知識與現場經驗</h2>
+      <p class="section-lead">分享常見設備噪音問題、原因分析與改善方向。</p>
+      <div class="home-articles">
+        <article class="home-article"><span class="eyebrow">冰水主機</span><h3>冰水主機旁不吵，遠端辦公室為什麼嗡嗡叫？</h3><p>從管路支撐、吊架、避震器到樓板共振，整理可能的振動傳遞路徑。</p><a href="article-chiller-low-frequency.html">閱讀全文 →</a></article>
+        <article class="home-article"><span class="eyebrow">冷卻水塔</span><h3>冷卻水塔為什麼晚上特別容易被聽見？</h3><p>夜間背景噪音降低後，風扇、落水與聲音直射問題更容易被感受到。</p><a href="article-cooling-tower-night-noise.html">閱讀全文 →</a></article>
+        <article class="home-article"><span class="eyebrow">空壓機</span><h3>空壓機隔音罩不是越密閉越好</h3><p>降噪同時必須兼顧散熱、進排風消音、維修與結構傳振。</p><a href="article-compressor-enclosure-heat.html">閱讀全文 →</a></article>
+      </div>
+      <div style="margin-top:24px"><a class="btn btn-primary" href="articles.html">查看更多專業文章</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <span class="eyebrow">常見問題</span>
+      <h2 class="section-title">噪音工程常見問題</h2>
+      <div class="faq">
+        <details open><summary>噪音改善可以保證完全無聲嗎？</summary><p>不建議承諾完全無聲。實際改善效果會受到設備、頻率、距離、背景音與建築結構等條件影響。</p></details>
+        <details><summary>只做隔音罩就一定有效嗎？</summary><p>不一定。若噪音透過基座、管路或建築結構傳遞，只包設備可能改善有限，也可能造成散熱問題。</p></details>
+        <details><summary>可以先用照片與影片初步判斷嗎？</summary><p>可以。建議提供設備全景、近照、運轉影片、周邊環境以及噪音發生位置。</p></details>
+        <details><summary>服務地區有哪些？</summary><p>提供桃園、台北及全台工業設備噪音改善相關服務。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-strip">
+        <div><h2>有噪音問題，先把現場照片傳給我們。</h2><p>服務專線：0983-057-746｜LINE：0983057746</p></div>
+        <a class="btn" href="tel:0983057746">立即諮詢</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>中央污染防治設備有限公司</h4><p>專業工業噪音改善、隔音、吸音、消音與減震工程。</p></div>
+      <div><h4>服務項目</h4><div class="footer-links"><a href="chiller-noise.html">冰水主機噪音改善</a><a href="cooling-tower-noise.html">冷卻水塔噪音改善</a><a href="air-compressor-noise.html">空壓機噪音改善</a><a href="#services">其他工業噪音服務</a></div></div>
+      <div><h4>聯絡資訊</h4><div class="footer-links"><a href="tel:0983057746">服務專線：0983-057-746</a><a href="https://line.me/ti/p/~0983057746">LINE：0983057746</a><a href="mailto:apce.corp@gmail.com">Email：apce.corp@gmail.com</a></div></div>
+    </div>
+    <div class="copyright">© 2026 中央污染防治設備有限公司．保留所有權利</div>
+  </div>
+</footer>
+<a class="mobile-call" href="tel:0983057746">服務專線 0983-057-746</a>
+</body></html>
