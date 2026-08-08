@@ -1,17 +1,13 @@
-這是「完整連結修正版」。
+城市噪音品牌旗艦文章
 
-這次請把整包 HTML 全部上傳到 GitHub repository 根目錄，覆蓋同名檔案。
+請上傳到 GitHub repository 根目錄：
+1. urban-noise-sources.html
+2. articles.html（若本資料夾內有這個檔案，請一併覆蓋）
 
-重點：
-1. index.html 首頁
-2. articles.html 專業文章中心
-3. cases.html 工程案例中心
-4. chiayi-hotel-chiller-noise.html 嘉義飯店案例
-5. 其他既有服務頁與文章頁
+首頁 index.html 不需要改。
 
-首頁現在有三條清楚路徑：
-- 工程案例 → cases.html
-- 專業文章 → articles.html
-- 最新嘉義飯店案例 → chiayi-hotel-chiller-noise.html
+上傳後文章網址：
+https://apcecorp1.github.io/zhongyang-noise/urban-noise-sources.html
 
-所有內部 HTML 連結已檢查。
+文章中心：
+https://apcecorp1.github.io/zhongyang-noise/articles.html
