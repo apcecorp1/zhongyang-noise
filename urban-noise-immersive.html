@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>都市，其實從來沒有真正安靜過｜都市噪音故事｜中央噪音工程</title>
+<meta name="description" content="都市噪音從來不只來自車流。老舊窗型冷氣、冷凍機、加壓馬達、揚水馬達、冰水主機、冷卻水塔、排油煙風管、樓板跑跳、水錘、變壓器、物流車與工廠設備，都可能成為城市日常的背景聲。">
+<style>
+:root{
+  --bg:#071a16;
+  --bg2:#0d2b23;
+  --green:#65e6ad;
+  --green2:#1ec27f;
+  --text:#effff7;
+  --muted:#a8c6ba;
+  --line:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.06);
+  --max:1100px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(34,205,140,.13), transparent 24%),
+    radial-gradient(circle at 85% 25%, rgba(65,130,255,.08), transparent 18%),
+    linear-gradient(180deg,var(--bg),#05110e 100%);
+  color:var(--text);
+  line-height:1.9;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 30px));margin:auto}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(5,17,14,.78);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:70px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{font-weight:900;letter-spacing:.04em}
+.phone{
+  padding:10px 16px;border:1px solid var(--line);
+  border-radius:999px;background:rgba(255,255,255,.04)
+}
+.hero{
+  min-height:92vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.015),transparent),
+    repeating-linear-gradient(90deg,transparent 0 79px,rgba(255,255,255,.02) 80px);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:900px}
+.eyebrow{
+  display:inline-block;
+  color:var(--green);
+  border:1px solid rgba(101,230,173,.3);
+  background:rgba(101,230,173,.07);
+  padding:7px 12px;border-radius:999px;
+  font-size:.85rem;font-weight:800;letter-spacing:.08em;
+}
+h1{
+  font-size:clamp(3.3rem,9vw,7.8rem);
+  line-height:.98;
+  letter-spacing:-.065em;
+  margin:22px 0 24px;
+}
+.hero p{
+  font-size:clamp(1.1rem,2.1vw,1.45rem);
+  color:var(--muted);
+  max-width:760px;margin:0 auto;
+}
+.scroll{
+  margin-top:48px;
+  color:#7fa99a;
+  font-size:.85rem;
+  letter-spacing:.16em;
+}
+.section{padding:110px 0}
+.story-block{
+  min-height:72vh;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:54px;
+  align-items:center;
+  border-top:1px solid var(--line);
+}
+.story-block:nth-child(even) .visual{order:2}
+.sound{
+  font-size:clamp(3rem,8vw,6rem);
+  font-weight:950;
+  color:var(--green);
+  letter-spacing:.08em;
+  line-height:1;
+}
+.story-copy h2{
+  font-size:clamp(2rem,4vw,3.6rem);
+  line-height:1.16;
+  margin:12px 0 18px;
+}
+.story-copy p{
+  color:var(--muted);
+  font-size:1.08rem;
+}
+.visual{
+  min-height:360px;
+  border-radius:28px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 30% 25%,rgba(101,230,173,.18),transparent 24%),
+    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+  display:grid;
+  place-items:center;
+  padding:34px;
+  box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+.icon{
+  font-size:clamp(5rem,12vw,10rem);
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.25));
+}
+.big-quote{
+  padding:120px 0;
+  text-align:center;
+}
+.big-quote h2{
+  font-size:clamp(2.7rem,6vw,5.6rem);
+  line-height:1.05;
+  letter-spacing:-.045em;
+  max-width:900px;
+  margin:0 auto;
+}
+.big-quote p{
+  color:var(--muted);
+  max-width:700px;margin:28px auto 0;
+  font-size:1.15rem;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:38px;
+}
+.card{
+  padding:24px;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:20px;
+}
+.card strong{display:block;color:var(--green);margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.faq details{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  border-radius:16px;
+  padding:18px 20px;
+  margin-bottom:12px;
+}
+.faq summary{font-weight:850;cursor:pointer}
+.faq p{color:var(--muted)}
+.cta{
+  margin-top:50px;
+  padding:36px;
+  border-radius:28px;
+  border:1px solid rgba(101,230,173,.25);
+  background:linear-gradient(135deg,rgba(101,230,173,.13),rgba(255,255,255,.03));
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;align-items:center;
+}
+.cta h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 8px}
+.cta p{margin:0;color:var(--muted)}
+.cta a{
+  background:var(--green);
+  color:#06372a;
+  font-weight:950;
+  padding:13px 18px;
+  border-radius:14px;
+}
+footer{
+  padding:42px 0;
+  border-top:1px solid var(--line);
+  color:#9bb7ad;
+}
+@media(max-width:820px){
+  .story-block{grid-template-columns:1fr;gap:22px;padding:70px 0;min-height:auto}
+  .story-block:nth-child(even) .visual{order:0}
+  .visual{min-height:260px}
+  .grid{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+  .hero{min-height:84vh}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">中央噪音工程</a>
+    <a class="phone" href="tel:0983057746">服務專線 0983-057-746</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">都市噪音專題</span>
+    <h1>都市，其實從來沒有真正安靜過。</h1>
+    <p>你每天聽見的，不只是噪音，而是整座城市正在呼吸。只是有時候，這座城市真的呼吸得太大聲了。</p>
+    <div class="scroll">SCROLL ↓</div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="story-block">
+    <div class="visual"><div class="icon">❄️</div></div>
+    <div class="story-copy">
+      <div class="sound">嗡……</div>
+      <h2>清晨六點半，三十年的窗型冷氣先醒了。</h2>
+      <p>外殼早已斑駁，散熱片覆滿歲月。它每天準時啟動，比鬧鐘還可靠。你以為那只是冷氣，其實它可能是整條巷子最資深的老員工。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🧊</div></div>
+    <div class="story-copy">
+      <div class="sound">嗯——</div>
+      <h2>早餐店還沒開門，冷凍機已經上班。</h2>
+      <p>它一年三百六十五天、一天二十四小時守著冰箱裡的牛奶與食材。白天你幾乎沒注意它，直到深夜萬籟俱寂，你才發現：原來它一直都在。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🍳</div></div>
+    <div class="story-copy">
+      <div class="sound">呼——</div>
+      <h2>熱炒店還沒開火，排油煙風管先把聲音送到你家。</h2>
+      <p>高速氣流穿過風管、彎頭、鐵皮與屋頂，最後把一道細細的風切聲送進陽台。它沒有惡意，只是每天都準時報到。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">💧</div></div>
+    <div class="story-copy">
+      <div class="sound">咚……嗡……</div>
+      <h2>地下室的揚水馬達，可能比住戶更早起床。</h2>
+      <p>整棟大樓每天的用水，都靠它默默送上每一層樓。樓頂還有一台加壓馬達不服老地值班。偶爾突然轟一聲，所有人都會抬頭看天花板。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🏢</div></div>
+    <div class="story-copy">
+      <div class="sound">嗡————</div>
+      <h2>夏天一到，冰水主機與冷卻水塔一起加入演奏。</h2>
+      <p>低頻聲音可能沿著管路、樓板、鋼構與混凝土傳遞。有時候你不是「聽見」它，而是感覺桌面、牆面或整個房間好像在微微顫動。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🚚</div></div>
+    <div class="story-copy">
+      <div class="sound">叮、叮、叮</div>
+      <h2>下午，是物流車與倒車警示音的時間。</h2>
+      <p>全聯補貨、新竹物流、便利商店卸貨，還有不遠處高架橋上一輛接一輛的聯結車。城市沒有按下靜音鍵，只有換班。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">👟</div></div>
+    <div class="story-copy">
+      <div class="sound">咚。咚。咚。</div>
+      <h2>放學之後，樓上的客廳變成操場。</h2>
+      <p>孩子不是故意吵，只是每一步都可能透過樓板傳到樓下。建築隔音不佳時，樓下甚至可以猜到今天到底是在追逐，還是在玩鬼抓人。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🎹</div></div>
+    <div class="story-copy">
+      <div class="sound">♪ ♫ ♪</div>
+      <h2>傍晚，樓下又開始彈貝多芬。</h2>
+      <p>沒有不好聽。只是今天也是、昨天也是、前天也是。你開始懷疑，是不是貝多芬本人每天晚上都來社區巡迴演出，而且永遠停在同一段。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🔧</div></div>
+    <div class="story-copy">
+      <div class="sound">鏘！</div>
+      <h2>半夜突然一聲巨響，不一定是靈異事件。</h2>
+      <p>很多時候只是老舊管路、水錘、固定不足或結構碰撞。聲音只響一秒，卻足以讓整棟樓一起清醒。</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="visual"><div class="icon">🏭</div></div>
+    <div class="story-copy">
+      <div class="sound">轟、嗡、鏘</div>
+      <h2>如果附近還有工廠，這首交響曲就更完整了。</h2>
+      <p>鼓風機、空壓機、沖床、車床、銑床、木工切割、集塵機，再加上一台台物流車。工廠與住宅混在一起時，白天是生產，晚上可能就變成鄰里的背景音。</p>
+    </div>
+  </div>
+</section>
+
+<section class="big-quote">
+  <div class="container">
+    <h2>原來，我們每天生活在一座巨大的機械城市。</h2>
+    <p>真正困擾人的，往往不是最大的聲音，而是那個一直存在、一直找不到來源的聲音。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">常見來源</span>
+    <h2 style="font-size:clamp(2.5rem,5vw,4.5rem);margin:18px 0 0;">你每天聽見的噪音，可能來自這些地方。</h2>
+    <div class="grid">
+      <div class="card"><strong>住宅設備</strong><p>窗型冷氣、除濕機、加壓馬達、地下室揚水馬達、電梯、水錘與管路敲擊。</p></div>
+      <div class="card"><strong>商業設備</strong><p>商店冷凍機、餐廳排油煙風管、排風機、冷藏設備、KTV與卡拉OK。</p></div>
+      <div class="card"><strong>大型空調設備</strong><p>冰水主機、冷卻水塔、泵浦、風機與大型管路共振。</p></div>
+      <div class="card"><strong>交通物流</strong><p>高架橋車流、聯結車、物流車、倒車警示、裝卸與夜間補貨。</p></div>
+      <div class="card"><strong>鄰里生活</strong><p>樓板跑跳、鋼琴、卡拉OK、家電低頻與生活撞擊聲。</p></div>
+      <div class="card"><strong>工廠加工</strong><p>沖床、銑床、木工切割、空壓機、鼓風機、集塵設備與敲擊加工。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="big-quote">
+  <div class="container">
+    <h2>城市可以有聲音。<br>但生活，不一定要充滿噪音。</h2>
+    <p>真正需要處理的，是那些持續存在、影響休息、工作與生活品質的設備噪音與結構傳振。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">噪音診斷</span>
+    <h2 style="font-size:clamp(2.5rem,5vw,4.4rem);margin:18px 0 20px;">每一種噪音，都有它的來源。</h2>
+    <p style="color:var(--muted);max-width:860px;font-size:1.08rem;">噪音工程不只是把聲音變小，更重要的是找到聲音從哪裡來。真正的來源可能是一台設備、一根管路、一個固定點、一面牆，甚至是距離很遠的冷卻水塔或冰水主機。</p>
+
+    <div class="faq" style="margin-top:32px;">
+      <details open><summary>為什麼晚上同一個聲音會覺得特別吵？</summary><p>因為夜間背景噪音下降，白天被車流、人聲遮住的設備聲音會突然變得很明顯。</p></details>
+      <details><summary>低頻嗡嗡聲一定來自隔壁設備嗎？</summary><p>不一定。低頻與振動可能經由管路、樓板、牆體與建築結構傳遞，真正來源有時距離很遠。</p></details>
+      <details><summary>水管突然「鏘」一聲是什麼？</summary><p>可能與水錘、閥件快速關閉、管路固定不足或結構碰撞有關，仍需依現場狀況判斷。</p></details>
+      <details><summary>噪音問題一定要做大型工程嗎？</summary><p>不一定。有些問題來自設備老化、固定鬆動或維護不足。先找出原因，再決定處理方式通常更有效率。</p></details>
+    </div>
+
+    <div class="cta">
+      <div>
+        <h2>你也一直聽到找不到來源的嗡嗡聲嗎？</h2>
+        <p>可提供發生時間、設備照片、周邊環境與聲音位置，協助初步判斷可能來源。</p>
+      </div>
+      <a href="tel:0983057746">服務專線 0983-057-746</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>中央污染防治設備有限公司｜中央噪音工程</strong>
+    <div>冷卻水塔・冰水主機・排風機・鼓風機・空壓機・低頻噪音・隔音・消音・減振工程</div>
+  </div>
+</footer>
+</body>
+</html>
