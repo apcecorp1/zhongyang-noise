@@ -501,6 +501,64 @@
       .v4-actions{display:grid}
     }
 
+
+    /* LINE / 電話快速聯絡按鈕 */
+    .quick-contact{
+      position:fixed;
+      right:20px;
+      bottom:24px;
+      z-index:120;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .quick-contact a{
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+      font-size:.78rem;
+      line-height:1.05;
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+      border:2px solid rgba(255,255,255,.92);
+      transition:.2s ease;
+    }
+    .quick-contact a:hover{transform:translateY(-2px) scale(1.03)}
+    .quick-contact .line-btn{background:#06c755}
+    .quick-contact .phone-btn{background:#008f63}
+    .quick-contact .qc-icon{
+      font-size:1.35rem;
+      line-height:1;
+      margin-bottom:4px;
+    }
+
+    @media(max-width:620px){
+      .mobile-call{display:none!important}
+      .quick-contact{
+        left:12px;
+        right:12px;
+        bottom:12px;
+        flex-direction:row;
+        gap:10px;
+      }
+      .quick-contact a{
+        width:auto;
+        height:54px;
+        flex:1;
+        border-radius:15px;
+        flex-direction:row;
+        gap:8px;
+        font-size:.98rem;
+      }
+      .quick-contact .qc-icon{font-size:1.2rem;margin:0}
+      footer{padding-bottom:92px}
+    }
+
 </style>
 </head>
 <body>
@@ -692,5 +750,17 @@
     <div class="copyright">© 2026 中央污染防治設備有限公司．保留所有權利</div>
   </div>
 </footer>
+
+<div class="quick-contact" aria-label="快速聯絡">
+  <a class="line-btn" href="https://line.me/ti/p/~0983057746" target="_blank" rel="noopener" aria-label="LINE 直接諮詢">
+    <span class="qc-icon">LINE</span>
+    <span>諮詢</span>
+  </a>
+  <a class="phone-btn" href="tel:0983057746" aria-label="撥打 0983-057-746">
+    <span class="qc-icon">☎</span>
+    <span>電話</span>
+  </a>
+</div>
+
 <a class="mobile-call" href="tel:0983057746">服務專線 0983-057-746</a>
 </body></html>
