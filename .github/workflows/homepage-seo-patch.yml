@@ -14,8 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Patch index.html safely
-        shell: python
+        shell: bash
         run: |
+          python - <<'PY'
           from pathlib import Path
           import re
 
@@ -101,7 +102,9 @@ jobs:
           s = s[:m.start()] + block + '\n' + s[m.start():]
           p.write_text(s, encoding='utf-8')
           print('Inserted homepage SEO block before </head>.')
+          PY
       - name: Commit homepage patch
+        shell: bash
         run: |
           if git diff --quiet -- index.html; then
             echo "No changes to commit"
