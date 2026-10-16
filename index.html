@@ -30,6 +30,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdro
 
 .mobile-menu{display:none}.mobile-menu summary{cursor:pointer;list-style:none;padding:10px 14px;border:1px solid var(--line);border-radius:10px;color:var(--deep);font-weight:900;min-height:44px}.mobile-menu summary::-webkit-details-marker{display:none}.mobile-menu summary:focus-visible,.mobile-menu a:focus-visible{outline:3px solid var(--g);outline-offset:3px}.mobile-menu[open] summary{background:var(--soft)}.mobile-menu nav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow);padding:12px 18px;max-height:calc(100dvh - 160px);overflow:auto}.mobile-menu nav a{display:block;padding:12px;border-bottom:1px solid var(--line);min-height:48px;font-weight:850}
 @media(max-width:700px){.nav{gap:10px}.brand{font-size:1rem}.brand small{font-size:.65rem}.navlinks{display:none}.mobile-menu{display:block;flex-shrink:0}body{padding-bottom:calc(88px + env(safe-area-inset-bottom))}html{scroll-padding-top:90px}.hero{padding:36px 0}.mobile-actions{left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line)}.mobile-actions a{min-height:48px}.hero .actions{margin-bottom:16px}}
+
+/* 2026-10-16 清爽精簡版：保留原有內容與搜尋標記 */
+@media(min-width:701px){.hero{min-height:510px}.hero h1{font-size:clamp(2.15rem,4vw,3.55rem)}.hero-copy{max-width:760px}.section{padding:54px 0}.title{font-size:clamp(1.65rem,3vw,2.35rem)}.intent-grid,.service-grid,.case-grid,.industry-grid{gap:15px;margin-top:23px}.service img,.case img{height:190px}.nav{min-height:64px}}
+body{line-height:1.65}.hero p{font-size:1rem}.lead{font-size:.98rem}.service h3,.case h3,.industry h3{font-size:1.04rem}.intent strong{font-size:1rem}.service-body,.case-body,.industry{padding:16px}.intent{padding:16px}.intent,.service,.case,.industry{border-radius:12px}.btn{font-weight:800}.navlinks{font-weight:750}
+@media(max-width:700px){.hero{min-height:470px}.hero h1{font-size:clamp(1.85rem,7vw,2.2rem);line-height:1.15}.hero p{font-size:.96rem}.section{padding:42px 0}.title{font-size:1.65rem}.service img,.case img{height:190px}}
 </style>
 <script type="application/ld+json">
 {
